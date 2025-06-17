@@ -41,3 +41,4 @@ jobs:
       run: |
         ARCH=$([[ "${{ matrix.runner }}" == "ubuntu-24.04" ]] && echo "amd64" || echo "arm64")
         bazel build  //clusterers:cluster-in-memory_main
+        bazel build //clusterers:stats-in-memory_main
